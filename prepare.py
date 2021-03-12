@@ -10,6 +10,12 @@ from sklearn.preprocessing import QuantileTransformer
 import wrangle
 
 def scale_telco(df):
+    '''
+    Scale_telco wrangles the telco dataframe from the codeup database,
+    splits the df into three data sets (train, validate, test), and scales
+    the data using SKLEARN's Min Max Scaler. It returns three datasets:
+    train_scaled, validate_scaled, test_scaled
+    '''
     df = wrangle.wrangle_telco()
 
     train, validate, test = wrangle.train_validate_test_split(df)
